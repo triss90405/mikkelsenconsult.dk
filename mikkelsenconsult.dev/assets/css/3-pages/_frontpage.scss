@@ -1,0 +1,66 @@
+/* - - - - - Background - - - - - */
+
+
+
+/* - - - - -  Header section  - - - - - */
+header {
+  overflow: hidden;
+  color: $white;
+  padding-bottom: 20px;
+  background: black;
+  opacity: 0.9;
+  overflow: hidden;
+  position: relative;
+  border-top: 4px solid $main-color;
+  padding-top: 20px;
+
+  .bg {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url("/assets/img/building-bg.png");
+    opacity: 0.06;
+    left: 0;
+    top: 0;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 100;
+    span {
+      color: $main-color;
+    }
+  }
+
+  .cta {
+    text-align: right;
+  }
+
+  svg {
+    margin: 100px 0 50px 0;
+    path {
+      fill: rgba($main-color, 0.2);
+    }
+  }
+
+  nav {
+    margin: 50px 0 100px 0;
+    a {
+      color: $black;
+      font-size: 14px;
+      font-family: $primary-font;
+      text-decoration: none;
+      margin: 0 20px;
+      transition: color 200ms ease-in-out;
+      &:hover {
+        color: $main-color;
+
+      }
+    }
+  }
+}
