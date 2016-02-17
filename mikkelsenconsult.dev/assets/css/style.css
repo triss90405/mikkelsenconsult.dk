@@ -157,7 +157,11 @@ sub {
  * Remove border when inside `a` element in IE 8/9/10.
  */
 img {
-  border: 0; }
+  border: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  height: auto; }
 
 /**
  * Correct overflow not hidden in IE 9/10/11.
@@ -391,14 +395,13 @@ th {
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse; }
 
-.tiny, .tiny-1, .tiny-2, .tiny-3, .tiny-4, .tiny-5, .tiny-6, .tiny-7, .tiny-8, .tiny-9, .tiny-10, .tiny-11, .tiny-12, .tiny-offset-1, .tiny-offset-2, .tiny-offset-3, .tiny-offset-4, .tiny-offset-5, .tiny-offset-6, .tiny-offset-7, .tiny-offset-8, .tiny-offset-9, .tiny-offset-10, .tiny-offset-11, .tiny-offset-12 {
+.tiny, .tiny-1, .tiny-2, .tiny-3, .tiny-4, .tiny-5, .tiny-6, .tiny-7, .tiny-8, .tiny-9, .tiny-10, .tiny-11, .tiny-12,
+.tiny-offset-1, .tiny-offset-2, .tiny-offset-3, .tiny-offset-4, .tiny-offset-5, .tiny-offset-6, .tiny-offset-7, .tiny-offset-8, .tiny-offset-9, .tiny-offset-10, .tiny-offset-11, .tiny-offset-12 {
   box-sizing: border-box;
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
-  flex: 0 0 auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem; }
+  flex: 0 0 auto; }
 
 .tiny {
   -webkit-box-flex: 1;
@@ -581,14 +584,13 @@ th {
   .container {
     width: 46rem; }
 
-  .small, .small-1, .small-2, .small-3, .small-4, .small-5, .small-6, .small-7, .small-8, .small-9, .small-10, .small-11, .small-12, .small-offset-1, .small-offset-2, .small-offset-3, .small-offset-4, .small-offset-5, .small-offset-6, .small-offset-7, .small-offset-8, .small-offset-9, .small-offset-10, .small-offset-11, .small-offset-12 {
+  .small, .small-1, .small-2, .small-3, .small-4, .small-5, .small-6, .small-7, .small-8, .small-9, .small-10, .small-11, .small-12,
+  .small-offset-1, .small-offset-2, .small-offset-3, .small-offset-4, .small-offset-5, .small-offset-6, .small-offset-7, .small-offset-8, .small-offset-9, .small-offset-10, .small-offset-11, .small-offset-12 {
     box-sizing: border-box;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
+    flex: 0 0 auto; }
 
   .small {
     -webkit-box-flex: 1;
@@ -770,14 +772,13 @@ th {
   .container {
     width: 62rem; }
 
-  .medium, .medium-1, .medium-2, .medium-3, .medium-4, .medium-5, .medium-6, .medium-7, .medium-8, .medium-9, .medium-10, .medium-11, .medium-12, .medium-offset-1, .medium-offset-2, .medium-offset-3, .medium-offset-4, .medium-offset-5, .medium-offset-6, .medium-offset-7, .medium-offset-8, .medium-offset-9, .medium-offset-10, .medium-offset-11, .medium-offset-12 {
+  .medium, .medium-1, .medium-2, .medium-3, .medium-4, .medium-5, .medium-6, .medium-7, .medium-8, .medium-9, .medium-10, .medium-11, .medium-12,
+  .medium-offset-1, .medium-offset-2, .medium-offset-3, .medium-offset-4, .medium-offset-5, .medium-offset-6, .medium-offset-7, .medium-offset-8, .medium-offset-9, .medium-offset-10, .medium-offset-11, .medium-offset-12 {
     box-sizing: border-box;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
+    flex: 0 0 auto; }
 
   .medium {
     -webkit-box-flex: 1;
@@ -959,14 +960,13 @@ th {
   .container {
     width: 73rem; }
 
-  .large, .large-1, .large-2, .large-3, .large-4, .large-5, .large-6, .large-7, .large-8, .large-9, .large-10, .large-11, .large-12, .large-offset-1, .large-offset-2, .large-offset-3, .large-offset-4, .large-offset-5, .large-offset-6, .large-offset-7, .large-offset-8, .large-offset-9, .large-offset-10, .large-offset-11, .large-offset-12 {
+  .large, .large-1, .large-2, .large-3, .large-4, .large-5, .large-6, .large-7, .large-8, .large-9, .large-10, .large-11, .large-12,
+  .large-offset-1, .large-offset-2, .large-offset-3, .large-offset-4, .large-offset-5, .large-offset-6, .large-offset-7, .large-offset-8, .large-offset-9, .large-offset-10, .large-offset-11, .large-offset-12 {
     box-sizing: border-box;
     -webkit-box-flex: 0;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem; }
+    flex: 0 0 auto; }
 
   .large {
     -webkit-box-flex: 1;
@@ -1211,7 +1211,7 @@ header {
   color: #F2F2F2;
   padding-bottom: 20px;
   background: black;
-  opacity: 0.9;
+  opacity: 0.85;
   overflow: hidden;
   position: relative;
   border-top: 4px solid #F06D06;
@@ -1247,11 +1247,13 @@ header {
       font-size: 14px;
       font-family: "nunito";
       text-decoration: none;
-      margin: 0 20px;
-      -webkit-transition: color 200ms ease-in-out;
-              transition: color 200ms ease-in-out; }
+      margin: 0 10px;
+      padding: 20px;
+      -webkit-transition: color 100ms ease-in-out;
+              transition: color 100ms ease-in-out; }
       header nav a:hover {
-        color: #F06D06; }
+        color: #F06D06;
+        text-decoration: none; }
 
 /* - - - - -  About section  - - - - - */
 section#about .about-title,
@@ -1275,7 +1277,67 @@ section#about .about-title {
   text-align: center; }
   section#about .about-title h1 {
     font-size: 40px; }
-section#about .about-text p {
-  font-weight: 100;
-  line-height: 1.7;
-  color: #4F5675; }
+section#about .about-text {
+  background: #F2F2F2; }
+  section#about .about-text p {
+    font-weight: 100;
+    line-height: 1.7;
+    color: #4F5675; }
+  section#about .about-text hr {
+    border: 0;
+    background: #dedede;
+    height: 2px; }
+  section#about .about-text .btn.normal {
+    margin: 20px 0 0 0;
+    font-size: 16px; }
+
+/* - - - - -  Projektor section  - - - - - */
+section#portfolio .header {
+  overflow: hidden;
+  color: #F2F2F2;
+  background: black;
+  opacity: 0.85;
+  overflow: hidden;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center; }
+  section#portfolio .header .bg {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url("/assets/img/building-bg.png");
+    opacity: 0.06;
+    left: 0;
+    top: 0; }
+section#portfolio .projects .prj-text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding: 0;
+  margin: 0; }
+  section#portfolio .projects .prj-text .inner {
+    text-align: center; }
+    section#portfolio .projects .prj-text .inner h2 {
+      line-height: 1.6; }
+    section#portfolio .projects .prj-text .inner h3 {
+      line-height: 2; }
+    section#portfolio .projects .prj-text .inner .btn.normal {
+      margin: 10px 0 0 0;
+      font-size: 16px; }
+section#portfolio .projects .prj-img img {
+  width: 100%;
+  height: auto;
+  margin-bottom: -4px; }

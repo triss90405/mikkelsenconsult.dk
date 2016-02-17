@@ -8,7 +8,7 @@ header {
   color: $white;
   padding-bottom: 20px;
   background: black;
-  opacity: 0.9;
+  opacity: 0.85;
   overflow: hidden;
   position: relative;
   border-top: 4px solid $main-color;
@@ -55,11 +55,12 @@ header {
       font-size: 14px;
       font-family: $primary-font;
       text-decoration: none;
-      margin: 0 20px;
-      transition: color 200ms ease-in-out;
+      margin: 0 10px;
+      padding: 20px;
+      transition: color 100ms ease-in-out;
       &:hover {
         color: $main-color;
-
+        text-decoration: none;
       }
     }
   }
@@ -73,7 +74,6 @@ section#about {
   .about-text {
     padding: 75px;
   }
-
   .about-title {
     background: $main-color;
     color: $white;
@@ -85,13 +85,80 @@ section#about {
       font-size: 40px;
     }
   }
-
   .about-text {
+    background: $white;
     p {
       font-weight: 100;
       line-height: 1.7;
       color: $second-color;
     }
+    hr {
+      border: 0;
+      background: lighten($black, 70%);
+      height: 2px;
+    }
+    .btn.normal {
+      margin: 20px 0 0 0;
+      font-size: 16px;
+    }
+  }
+}
+
+
+/* - - - - -  Projektor section  - - - - - */
+section#portfolio {
+  .header {
+    overflow: hidden;
+    color: $white;
+    background: black;
+    opacity: 0.85;
+    overflow: hidden;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+    .bg {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      background-attachment: fixed;
+      background-image: url("/assets/img/building-bg.png");
+      opacity: 0.06;
+      left: 0;
+      top: 0;
+    }
   }
 
+  .projects {
+
+    .prj-text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      .inner {
+        text-align: center;
+        h2{
+          line-height: 1.6;
+        }
+        h3 {
+          line-height: 2;
+        }
+        .btn.normal {
+          margin: 10px 0 0 0;
+          font-size: 16px;
+        }
+      }
+    }
+    .prj-img {
+      img {
+        width: 100%;
+        height: auto;
+        margin-bottom: -4px;
+      }
+    }
+  }
 }
