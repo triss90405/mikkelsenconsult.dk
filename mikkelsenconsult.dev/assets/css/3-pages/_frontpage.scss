@@ -64,3 +64,34 @@ header {
     }
   }
 }
+
+
+/* - - - - -  About section  - - - - - */
+section#about {
+
+  .about-title,
+  .about-text {
+    padding: 75px;
+  }
+
+  .about-title {
+    background: $main-color;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .about-text {
+    p {
+      font-weight: 100;
+      line-height: 1.7;
+      color: $second-color;
+    }
+  }
+
+}

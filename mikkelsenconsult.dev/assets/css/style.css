@@ -1167,9 +1167,24 @@ Breakpoints
 * {
   font-family: "Lora"; }
 
+h1 {
+  font-weight: 100; }
+
+h2 {
+  font-weight: 100;
+  font-style: italic;
+  color: #4F5675; }
+
 h3 {
   font-weight: 100;
   line-height: 1.5; }
+
+a {
+  color: #F06D06;
+  font-weight: 100;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
 
 .btn {
   display: inline-block;
@@ -1237,3 +1252,30 @@ header {
               transition: color 200ms ease-in-out; }
       header nav a:hover {
         color: #F06D06; }
+
+/* - - - - -  About section  - - - - - */
+section#about .about-title,
+section#about .about-text {
+  padding: 75px; }
+section#about .about-title {
+  background: #F06D06;
+  color: #F2F2F2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center; }
+  section#about .about-title h1 {
+    font-size: 40px; }
+section#about .about-text p {
+  font-weight: 100;
+  line-height: 1.7;
+  color: #4F5675; }
