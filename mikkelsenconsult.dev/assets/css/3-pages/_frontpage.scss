@@ -129,9 +129,7 @@ section#portfolio {
       top: 0;
     }
   }
-
   .projects {
-
     .prj-text {
       display: flex;
       align-items: center;
@@ -159,6 +157,42 @@ section#portfolio {
         height: auto;
         margin-bottom: -4px;
       }
+    }
+  }
+}
+
+
+/* - - - - -  Contact section  - - - - - */
+section#contact {
+  background: $main-color;
+  padding: 75px 0;
+  text-align: center;
+  h1, p {
+    color: $white;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    a {
+      color: white;
+      text-decoration: underline;
+    }
+  }
+  p.subtitle {
+    color: darken($main-color, 20%);
+    font-size: 12px;
+    margin: -20px 0 20px 0;
+  }
+  p.name {
+    font-size: 30px;
+    margin: 50px 0 10px 0;
+    font-weight: 700
+  }
+  svg#logo-contact {
+    margin: 20px 0 0 0;
+    path {
+      fill: darken($main-color, 10%);
     }
   }
 }
