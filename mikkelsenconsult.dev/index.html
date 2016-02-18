@@ -13,7 +13,7 @@
 
 
   <!-- Header and navigation section -->
-  <header>
+  <header id="home">
     <div class="bg"></div>
     <div class="container">
       <div class="row">
@@ -87,10 +87,10 @@
           <h3>Hej! Mit navn er Rasmus Mikkelsen.<br>Jeg bygger huse! Hvad gør du?</h3>
 
           <nav>
-            <a href="#" class="btn normal" title="hjem">Hjem</a>
-            <a href="#" title="omkring">Omkring</a>
-            <a href="#" title="portfolio">Portfolio</a>
-            <a href="#" title="kontakt">Kontakt</a>
+            <a href="#home" class="btn normal" title="hjem">Hjem</a>
+            <a href="#about" title="omkring">Omkring</a>
+            <a href="#portfolio" title="portfolio">Portfolio</a>
+            <a href="#contact" title="kontakt">Kontakt</a>
           </nav>
 
         </div>
@@ -235,22 +235,18 @@
   <footer>
     <div class="bg"></div>
     <div class="row">
-
-    <div class="tiny-12 small-12 medium-6 large-6 nav">
-      <nav>
-        <a href="#" title="hjem">Hjem</a>
-        <a href="#" title="omkring">Omkring</a>
-        <a href="#" title="portfolio">Portfolio</a>
-        <a href="#" title="kontakt">Kontakt</a>
-      </nav>
-    </div>
-    <div class="tiny-12 small-12 medium-6 large-6 name">
-      <h1 class="logo"><span>M</span>ikkelsen<span>C</span>onsult</h1>
-    </div>
-
-    </div>
-
-
+      <div class="tiny-12 small-12 medium-6 large-6 nav">
+        <nav>
+          <a href="#home" title="hjem">Hjem</a>
+          <a href="#about" title="omkring">Omkring</a>
+          <a href="#portfolio" title="portfolio">Portfolio</a>
+          <a href="#contact" title="kontakt">Kontakt</a>
+        </nav>
+      </div>
+      <div class="tiny-12 small-12 medium-6 large-6 name">
+        <h1 class="logo"><span>M</span>ikkelsen<span>C</span>onsult</h1>
+      </div>
+    </div>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="/assets/js/functions.js"></script>
     <script>
@@ -262,8 +258,5 @@
     ga('send', 'pageview');
     </script>
   </footer>
-
-
-
 </body>
 </html>
