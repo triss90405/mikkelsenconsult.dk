@@ -1260,11 +1260,11 @@ header {
       header .cta {
         display: none; } }
   header svg {
-    margin: 100px 0 50px 0;
-    width: 60%;
-    height: auto; }
+    margin: 100px 0 50px 0; }
     @media (max-width: 64em) {
       header svg {
+        width: 50%;
+        height: auto;
         margin: 0;
         text-align: center; } }
     header svg path {
@@ -1346,6 +1346,9 @@ section#portfolio .header {
   padding-top: 40px;
   padding-bottom: 40px;
   text-align: center; }
+  @media (max-width: 64em) {
+    section#portfolio .header {
+      padding: 25px 0; } }
   section#portfolio .header .bg {
     width: 100%;
     position: absolute;
@@ -1356,7 +1359,7 @@ section#portfolio .header {
     opacity: 0.06;
     left: 0;
     top: 0; }
-section#portfolio .projects .prj-text {
+section#portfolio .prj-text {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1372,16 +1375,22 @@ section#portfolio .projects .prj-text {
   text-align: center;
   padding: 0;
   margin: 0; }
-  section#portfolio .projects .prj-text .inner {
+  section#portfolio .prj-text .inner {
     text-align: center; }
-    section#portfolio .projects .prj-text .inner h2 {
+    @media (max-width: 64em) {
+      section#portfolio .prj-text .inner {
+        padding: 35px 0 10px 0; } }
+    section#portfolio .prj-text .inner h2 {
       line-height: 1.6; }
-    section#portfolio .projects .prj-text .inner h3 {
+    section#portfolio .prj-text .inner h3 {
       line-height: 2; }
-    section#portfolio .projects .prj-text .inner .btn.normal {
+    section#portfolio .prj-text .inner .btn.normal {
       margin: 10px 0 0 0;
       font-size: 16px; }
-section#portfolio .projects .prj-img img {
+      @media (max-width: 64em) {
+        section#portfolio .prj-text .inner .btn.normal {
+          display: none; } }
+section#portfolio .prj-img img {
   width: 100%;
   height: auto;
   margin-bottom: -4px; }

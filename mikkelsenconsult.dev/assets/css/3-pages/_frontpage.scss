@@ -53,9 +53,9 @@ header {
   }
   svg {
     margin: 100px 0 50px 0;
-    width: 60%;
-    height: auto;
     @media (max-width: 64em) {
+      width: 50%;
+      height: auto;
       margin: 0;
       text-align: center;
     }
@@ -146,6 +146,9 @@ section#portfolio {
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
+    @media (max-width: 64em) {
+      padding: 25px 0;
+    }
     .bg {
       width: 100%;
       position: absolute;
@@ -158,37 +161,43 @@ section#portfolio {
       top: 0;
     }
   }
-  .projects {
-    .prj-text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+  .prj-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    .inner {
       text-align: center;
-      padding: 0;
-      margin: 0;
-      .inner {
-        text-align: center;
-        h2{
-          line-height: 1.6;
-        }
-        h3 {
-          line-height: 2;
-        }
-        .btn.normal {
-          margin: 10px 0 0 0;
-          font-size: 16px;
-        }
+      @media (max-width: 64em) {
+        padding: 35px 0 10px 0;
       }
-    }
-    .prj-img {
-      img {
-        width: 100%;
-        height: auto;
-        margin-bottom: -4px;
+      h2{
+        line-height: 1.6;
+      }
+      h3 {
+        line-height: 2;
+      }
+      .btn.normal {
+        margin: 10px 0 0 0;
+        font-size: 16px;
+        @media (max-width: 64em) {
+          display: none;
+        }
       }
     }
   }
+  .prj-img {
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: -4px;
+    }
+  }
 }
+
 
 
 
