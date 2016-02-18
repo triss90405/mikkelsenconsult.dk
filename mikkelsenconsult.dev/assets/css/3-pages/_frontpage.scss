@@ -13,7 +13,10 @@ header {
   position: relative;
   border-top: 4px solid $main-color;
   padding-top: 20px;
-
+  @media (max-width: 64em) {
+    height: 100vh;
+    padding-top: 50px;
+  }
   .bg {
     width: 100%;
     position: absolute;
@@ -25,7 +28,6 @@ header {
     left: 0;
     top: 0;
   }
-
   .logo {
     margin: 0;
     padding: 0;
@@ -36,31 +38,40 @@ header {
       color: $main-color;
     }
   }
-
   .cta {
     text-align: right;
+    @media (max-width: 64em) {
+      display: none;
+    }
   }
-
   svg {
     margin: 100px 0 50px 0;
+    @media (max-width: 64em) {
+      margin: 30px 0 30px 0;
+    }
     path {
       fill: rgba($main-color, 0.2);
     }
   }
-
   nav {
     margin: 50px 0 100px 0;
+    @media (max-width: 64em) {
+      margin: 100px 0 10px 0;
+    }
     a {
-      color: $black;
+      color: $main-color;
       font-size: 14px;
       font-family: $primary-font;
       text-decoration: none;
       margin: 0 10px;
       padding: 20px;
       transition: color 100ms ease-in-out;
+      @media (max-width: 64em) {
+        padding: 7px;
+        margin: 0;
+      }
       &:hover {
-        color: $main-color;
-        text-decoration: none;
+        text-decoration: underline;;
       }
     }
   }
@@ -69,7 +80,6 @@ header {
 
 /* - - - - -  About section  - - - - - */
 section#about {
-
   .about-title,
   .about-text {
     padding: 75px;
@@ -162,6 +172,7 @@ section#portfolio {
 }
 
 
+
 /* - - - - -  Contact section  - - - - - */
 section#contact {
   background: $main-color;
@@ -193,6 +204,56 @@ section#contact {
     margin: 20px 0 0 0;
     path {
       fill: darken($main-color, 10%);
+    }
+  }
+}
+
+
+
+/* - - - - -  Footer section  - - - - - */
+footer {
+  overflow: hidden;
+  color: $white;
+  padding-bottom: 20px;
+  background: black;
+  opacity: 0.85;
+  overflow: hidden;
+  position: relative;
+  border-top: 4px solid $main-color;
+  padding-top: 20px;
+  .bg {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    background-attachment: fixed;
+    background-image: url("/assets/img/building-bg.png");
+    opacity: 0.06;
+    left: 0;
+    top: 0;
+  }
+  .nav {
+    padding: 0 5%;
+    nav {
+      a {
+        color: $black;
+        padding: 0 10px;
+        line-height: 90px;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:hover {
+          color: $main-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .name {
+    padding: 0 5%;
+    text-align: right;
+    h1 {
+      color: $black;
     }
   }
 }
