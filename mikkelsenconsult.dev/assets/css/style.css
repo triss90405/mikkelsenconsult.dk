@@ -1180,7 +1180,7 @@ h3 {
   line-height: 1.5; }
 
 a {
-  color: #2ECC71;
+  color: #f57a31;
   font-weight: 100;
   text-decoration: none; }
   a:hover {
@@ -1192,8 +1192,8 @@ a {
   padding: 10px 15px 10px 15px; }
   .btn.normal {
     background: 0 0;
-    color: #2ECC71;
-    border: 2px solid #2ECC71;
+    color: #f57a31;
+    border: 2px solid #f57a31;
     padding: 12px 14px;
     font-size: 12px;
     font-family: montserrat;
@@ -1201,7 +1201,7 @@ a {
             transition: all .3s;
     text-decoration: none; }
     .btn.normal:hover {
-      background: #2ECC71;
+      background: #f57a31;
       color: #F2F2F2; }
 
 /* - - - - - Clear floats - - - - - */
@@ -1224,7 +1224,7 @@ header {
   opacity: 0.85;
   overflow: hidden;
   position: relative;
-  border-top: 4px solid #2ECC71;
+  border-top: 4px solid #f57a31;
   padding-top: 20px; }
   @media (max-width: 64em) {
     header {
@@ -1263,7 +1263,7 @@ header {
     line-height: 1;
     font-weight: 100; }
     header .logo span {
-      color: #2ECC71; }
+      color: #f57a31; }
   header .cta {
     text-align: right; }
     @media (max-width: 64em) {
@@ -1278,14 +1278,14 @@ header {
         margin: 0;
         text-align: center; } }
     header svg path {
-      fill: rgba(46, 204, 113, 0.2); }
+      fill: rgba(245, 122, 49, 0.2); }
   header nav {
     margin: 50px 0 100px 0; }
     @media (max-width: 64em) {
       header nav {
         margin: 0 0 30px 0; } }
     header nav a {
-      color: #2ECC71;
+      color: #f57a31;
       font-size: 14px;
       font-family: "nunito";
       text-decoration: none;
@@ -1305,7 +1305,7 @@ section#about .about-title,
 section#about .about-text {
   padding: 75px; }
 section#about .about-title {
-  background: #2ECC71;
+  background: #f57a31;
   color: #F2F2F2;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1439,7 +1439,7 @@ section#portfolio .prj-item .prj-img {
             justify-content: center;
     text-align: center;
     font-size: 24px;
-    color: #2ECC71;
+    color: #f57a31;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all 2s ease-in-out;
@@ -1465,7 +1465,7 @@ section#portfolio .prj-item .prj-img {
 
 /* - - - - -  Contact section  - - - - - */
 section#contact {
-  background: #2ECC71;
+  background: #f57a31;
   padding: 75px 0;
   text-align: center; }
   section#contact h1, section#contact p {
@@ -1476,7 +1476,7 @@ section#contact {
     color: white;
     text-decoration: underline; }
   section#contact p.subtitle {
-    color: #1b7943;
+    color: #b74a09;
     font-size: 12px;
     margin: -20px 0 20px 0; }
   section#contact p.name {
@@ -1486,7 +1486,7 @@ section#contact {
   section#contact svg#logo-contact {
     margin: 20px 0 0 0; }
     section#contact svg#logo-contact path {
-      fill: #25a25a; }
+      fill: #e85d0b; }
 
 /* - - - - -  Footer section  - - - - - */
 footer {
@@ -1497,7 +1497,7 @@ footer {
   opacity: 0.85;
   overflow: hidden;
   position: relative;
-  border-top: 4px solid #2ECC71;
+  border-top: 4px solid #f57a31;
   padding-top: 20px; }
   footer .bg {
     width: 100%;
@@ -1521,7 +1521,7 @@ footer {
       footer .nav nav a:first-child {
         padding-left: 0; }
       footer .nav nav a:hover {
-        color: #2ECC71;
+        color: #f57a31;
         text-decoration: none; }
   footer .name {
     padding: 0 5%;
