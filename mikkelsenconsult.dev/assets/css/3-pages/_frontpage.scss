@@ -91,12 +91,21 @@ section#about {
     align-items: center;
     justify-content: center;
     text-align: center;
+    @media (max-width: 64em) {
+      padding: 15px 0;
+    }
     h1 {
       font-size: 40px;
+      @media (max-width: 64em) {
+        font-size: 30px;
+      }
     }
   }
   .about-text {
     background: $white;
+    @media (max-width: 64em) {
+      padding: 50px 5%;
+    }
     p {
       font-weight: 100;
       line-height: 1.7;

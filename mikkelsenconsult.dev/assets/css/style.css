@@ -1291,10 +1291,19 @@ section#about .about-title {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center; }
+  @media (max-width: 64em) {
+    section#about .about-title {
+      padding: 15px 0; } }
   section#about .about-title h1 {
     font-size: 40px; }
+    @media (max-width: 64em) {
+      section#about .about-title h1 {
+        font-size: 30px; } }
 section#about .about-text {
   background: #F2F2F2; }
+  @media (max-width: 64em) {
+    section#about .about-text {
+      padding: 50px 5%; } }
   section#about .about-text p {
     font-weight: 100;
     line-height: 1.7;
