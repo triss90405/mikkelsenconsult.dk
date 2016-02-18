@@ -1180,7 +1180,7 @@ h3 {
   line-height: 1.5; }
 
 a {
-  color: #2ECC71;
+  color: #E74C3C;
   font-weight: 100;
   text-decoration: none; }
   a:hover {
@@ -1192,8 +1192,8 @@ a {
   padding: 10px 15px 10px 15px; }
   .btn.normal {
     background: 0 0;
-    color: #2ECC71;
-    border: 2px solid #2ECC71;
+    color: #E74C3C;
+    border: 2px solid #E74C3C;
     padding: 12px 14px;
     font-size: 12px;
     font-family: montserrat;
@@ -1201,7 +1201,7 @@ a {
             transition: all .3s;
     text-decoration: none; }
     .btn.normal:hover {
-      background: #2ECC71;
+      background: #E74C3C;
       color: #F2F2F2; }
 
 /* - - - - - Background - - - - - */
@@ -1214,7 +1214,7 @@ header {
   opacity: 0.85;
   overflow: hidden;
   position: relative;
-  border-top: 4px solid #2ECC71;
+  border-top: 4px solid #E74C3C;
   padding-top: 20px; }
   @media (max-width: 64em) {
     header {
@@ -1253,7 +1253,7 @@ header {
     line-height: 1;
     font-weight: 100; }
     header .logo span {
-      color: #2ECC71; }
+      color: #E74C3C; }
   header .cta {
     text-align: right; }
     @media (max-width: 64em) {
@@ -1268,14 +1268,14 @@ header {
         margin: 0;
         text-align: center; } }
     header svg path {
-      fill: rgba(46, 204, 113, 0.2); }
+      fill: rgba(231, 76, 60, 0.2); }
   header nav {
     margin: 50px 0 100px 0; }
     @media (max-width: 64em) {
       header nav {
         margin: 0 0 30px 0; } }
     header nav a {
-      color: #2ECC71;
+      color: #E74C3C;
       font-size: 14px;
       font-family: "nunito";
       text-decoration: none;
@@ -1295,7 +1295,7 @@ section#about .about-title,
 section#about .about-text {
   padding: 75px; }
 section#about .about-title {
-  background: #2ECC71;
+  background: #E74C3C;
   color: #F2F2F2;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1397,7 +1397,7 @@ section#portfolio .prj-img img {
 
 /* - - - - -  Contact section  - - - - - */
 section#contact {
-  background: #2ECC71;
+  background: #E74C3C;
   padding: 75px 0;
   text-align: center; }
   section#contact h1, section#contact p {
@@ -1408,7 +1408,7 @@ section#contact {
     color: white;
     text-decoration: underline; }
   section#contact p.subtitle {
-    color: #1b7943;
+    color: #a82315;
     font-size: 12px;
     margin: -20px 0 20px 0; }
   section#contact p.name {
@@ -1418,7 +1418,7 @@ section#contact {
   section#contact svg#logo-contact {
     margin: 20px 0 0 0; }
     section#contact svg#logo-contact path {
-      fill: #25a25a; }
+      fill: #d62c1a; }
 
 /* - - - - -  Footer section  - - - - - */
 footer {
@@ -1429,7 +1429,7 @@ footer {
   opacity: 0.85;
   overflow: hidden;
   position: relative;
-  border-top: 4px solid #2ECC71;
+  border-top: 4px solid #E74C3C;
   padding-top: 20px; }
   footer .bg {
     width: 100%;
@@ -1443,6 +1443,9 @@ footer {
     top: 0; }
   footer .nav {
     padding: 0 5%; }
+    @media (max-width: 64em) {
+      footer .nav nav {
+        text-align: center; } }
     footer .nav nav a {
       color: #2B2B2B;
       padding: 0 10px;
@@ -1450,10 +1453,13 @@ footer {
       footer .nav nav a:first-child {
         padding-left: 0; }
       footer .nav nav a:hover {
-        color: #2ECC71;
+        color: #E74C3C;
         text-decoration: none; }
   footer .name {
     padding: 0 5%;
     text-align: right; }
+    @media (max-width: 64em) {
+      footer .name {
+        text-align: center; } }
     footer .name h1 {
       color: #2B2B2B; }

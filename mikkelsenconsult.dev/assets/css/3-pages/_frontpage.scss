@@ -263,6 +263,9 @@ footer {
   .nav {
     padding: 0 5%;
     nav {
+      @media (max-width: 64em) {
+        text-align: center;
+      }
       a {
         color: $black;
         padding: 0 10px;
@@ -280,6 +283,9 @@ footer {
   .name {
     padding: 0 5%;
     text-align: right;
+    @media (max-width: 64em) {
+      text-align: center;
+    }
     h1 {
       color: $black;
     }
