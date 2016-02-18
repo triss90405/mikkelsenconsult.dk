@@ -15,7 +15,14 @@ header {
   padding-top: 20px;
   @media (max-width: 64em) {
     height: 100vh;
-    padding-top: 50px;
+    padding-top: 0;
+    .header-content{
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+    }
   }
   .bg {
     width: 100%;
@@ -46,8 +53,11 @@ header {
   }
   svg {
     margin: 100px 0 50px 0;
+    width: 60%;
+    height: auto;
     @media (max-width: 64em) {
-      margin: 30px 0 30px 0;
+      margin: 0;
+      text-align: center;
     }
     path {
       fill: rgba($main-color, 0.2);
@@ -56,7 +66,7 @@ header {
   nav {
     margin: 50px 0 100px 0;
     @media (max-width: 64em) {
-      margin: 100px 0 10px 0;
+      margin: 0 0 30px 0;
     }
     a {
       color: $main-color;
