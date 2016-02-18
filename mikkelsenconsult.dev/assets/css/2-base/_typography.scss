@@ -1,11 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700italic,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,300italic);
 
-$primary-font: "nunito";
-$secondary-font: "montserrat";
-$third-font: "Lora";
-
+$primary-font: 'Open Sans', sans-serif;;
+$secondary-font: 'Open Sans', sans-serif;;
+$third-font: 'Open Sans', sans-serif;;
 
 * {
   font-family: $third-font;
@@ -26,7 +23,7 @@ h3 {
 
 a {
   color: $main-color;
-  font-weight: 100;
+  font-weight: 400;
   text-decoration: none;
   &:hover {
     text-decoration: underline;

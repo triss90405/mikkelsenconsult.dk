@@ -4,9 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
-@import url(https://fonts.googleapis.com/css?family=Lora:400,400italic,700italic,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,400italic,300italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1165,7 +1163,7 @@ Breakpoints
 }
 *********************************/
 * {
-  font-family: "Lora"; }
+  font-family: "Open Sans", sans-serif; }
 
 h1 {
   font-weight: 100; }
@@ -1181,7 +1179,7 @@ h3 {
 
 a {
   color: #f57a31;
-  font-weight: 100;
+  font-weight: 400;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -1195,8 +1193,9 @@ a {
     color: #f57a31;
     border: 2px solid #f57a31;
     padding: 12px 14px;
-    font-size: 12px;
-    font-family: montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
     -webkit-transition: all .3s;
             transition: all .3s;
     text-decoration: none; }
@@ -1225,7 +1224,8 @@ header {
   overflow: hidden;
   position: relative;
   border-top: 4px solid #f57a31;
-  padding-top: 20px; }
+  padding-top: 20px;
+  min-height: 100vh; }
   @media (max-width: 64em) {
     header {
       height: 100vh;
@@ -1279,6 +1279,8 @@ header {
         text-align: center; } }
     header svg path {
       fill: rgba(245, 122, 49, 0.2); }
+    header svg text {
+      fill: rgba(245, 122, 49, 0.2); }
   header nav {
     margin: 50px 0 100px 0; }
     @media (max-width: 64em) {
@@ -1287,7 +1289,7 @@ header {
     header nav a {
       color: #f57a31;
       font-size: 14px;
-      font-family: "nunito";
+      font-family: "Open Sans", sans-serif;
       text-decoration: none;
       margin: 0 10px;
       padding: 20px;
@@ -1303,7 +1305,8 @@ header {
 /* - - - - -  About section  - - - - - */
 section#about .about-title,
 section#about .about-text {
-  padding: 75px; }
+  padding: 75px;
+  min-height: 100vh; }
 section#about .about-title {
   background: #f57a31;
   color: #F2F2F2;
@@ -1334,7 +1337,7 @@ section#about .about-text {
     section#about .about-text {
       padding: 50px 5%; } }
   section#about .about-text p {
-    font-weight: 100;
+    font-weight: 400;
     line-height: 1.7;
     color: #4F5675; }
   section#about .about-text hr {
@@ -1484,7 +1487,7 @@ section#contact {
     margin: 50px 0 10px 0;
     font-weight: 700; }
   section#contact svg#logo-contact {
-    margin: 20px 0 0 0; }
+    margin: 40px 0  0; }
     section#contact svg#logo-contact path {
       fill: #e85d0b; }
 
@@ -1509,6 +1512,8 @@ footer {
     opacity: 0.06;
     left: 0;
     top: 0; }
+  footer svg {
+    margin-top: 20px; }
   footer .nav {
     padding: 0 5%; }
     @media (max-width: 64em) {
