@@ -366,23 +366,25 @@ section#projects {
 
 /* - - - - -  Contact section  - - - - - */
 section#contact {
-  .cotntact-title,
+  .contact-title,
   .contact-form {
+    margin-top: -1px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    padding: 0 75px;
+    text-align: center;
+    min-height: 100vh;
   }
   .contact-title {
     background: $main-color;
-    padding: 75px 0;
-    text-align: center;
-    margin-top: -1px;
-    min-height: 100vh;
+
     h1, p {
       color: $white;
     }
     h1 {
       font-size: 40px;
+      margin: -70px 0 15px  0;
     }
     p {
       a {
@@ -407,17 +409,37 @@ section#contact {
       }
     }
   }
-  .contact-form {
-    padding: 0 75px;
-    background: $white;
-    label {
-      margin: 10px 0;
-    }
-    input[type='text'],
-    input[type='email'],
-    textarea {
-      width: 100%;
 
+  .contact-form {
+    background: $white;
+    .form-grp {
+      width: 100%;
+      position: relative;
+      label {
+        position: absolute;
+        top: 32px;
+        left: 11px;
+        color: lighten($black, 50%);
+        transition: all 200ms ease-in-out;
+      }
+      input[type='text'],
+      input[type='email'],
+      textarea {
+        width: 100%;
+        border: 2px solid transparent;
+        padding: 10px;
+        margin: 20px 0;
+        &:focus {
+          outline: none;
+          border: 2px solid $main-color;
+          ~ label {
+            top: -10px;
+          }
+        }
+      }
+      textarea {
+        resize: vertical;
+      }
     }
   }
 }

@@ -21,10 +21,10 @@ $( document ).ready(function() {
   /* - - - - - Sticky navigation when scrolling  - - - - - */
   var scrolledMenu = function() {
     $(window).scroll(function() {
-      var nav = $('#sticky-nav');
-      var navInner = $('.nav-items');
-      var yScrollPos = window.pageYOffset;
-      var scrollPosNav = 600;
+      var nav = $('#sticky-nav'),
+          navInner = $('.nav-items'),
+          yScrollPos = window.pageYOffset,
+          scrollPosNav = 600;
       if(yScrollPos > scrollPosNav) {
         nav.css("top", "0");
       }
@@ -42,8 +42,21 @@ $( document ).ready(function() {
         nav = $('.nav-items');
     toggle.on('click', function() {
       nav.toggleClass('active');
-    })
+    });
   };
+
+
+
+  /* - - - - - Form label  - - - - - */
+  var formLabel = function() {
+    $('.form-grp input').blur(function() {
+      if( $(this).val().length > 0 ) {
+          $(this).next('label').css('top', '-10px');
+      }
+    });
+  };
+
+
 
 
 
@@ -51,5 +64,6 @@ $( document ).ready(function() {
   smoothScroll();
   scrolledMenu();
   mobileNav();
+  formLabel();
 
 });

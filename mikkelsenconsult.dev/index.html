@@ -178,12 +178,31 @@
       </div>
 
       <div class="tiny-12 small-12 medium-6 large-6 contact-form">
-        <form action="mail.php" method="post">
-          <label for="name">Dit navn: <input id="name" name="name" type="text"></label>
-          <label for="mail">Din email: <input id="mail" name="mail" type="email"></label>
-          <label for="msg">Besked: <textarea name="msg" id="msg" cols="30" rows="10"></textarea></label>
-          <button type="submit" class="btn normal">Send besked</button>
-        </form>
+
+        <div>
+
+          <form action="mail.php" method="post">
+
+            <div class="form-grp">
+              <input id="name" name="name" required type="text">
+              <label for="name">Dit navn</label>
+            </div>
+
+            <div class="form-grp">
+              <input id="mail" name="mail" required type="email">
+              <label for="mail">Din email</label>
+            </div>
+
+            <div class="form-grp">
+              <textarea name="msg" id="msg" required cols="30" rows="10"></textarea>
+              <label for="msg">Besked</label>
+            </div>
+
+            <button type="submit" class="btn normal">Send besked</button>
+
+          </form>
+
+        </div>
       </div>
 
 
