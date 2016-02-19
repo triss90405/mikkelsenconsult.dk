@@ -162,7 +162,36 @@ header {
     font-size: 30px;
     line-height: 1;
     font-weight: 100;
+    a#linkedin {
+      float: right;
+      display: block;
+      transition: all 100ms ease-in-out;
+      svg {
+        height: 30px;
+        margin: 0;
 
+        path#bg {
+          fill: rgba($main-color, 0.4);
+        }
+        g#logo {
+          rect, path, circle {
+            fill: rgba($white, 0.4);
+          }
+        }
+      }
+      &:hover {
+        svg {
+          path#bg {
+            fill: rgba($main-color, 0.8);
+          }
+          g#logo {
+            rect, path, circle {
+              fill: rgba($white, 0.8);
+            }
+          }
+        }
+      }
+    }
     @media (max-width: 64em) {
       display: none;
     }

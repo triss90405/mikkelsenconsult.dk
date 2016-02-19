@@ -1383,6 +1383,22 @@ header {
     font-size: 30px;
     line-height: 1;
     font-weight: 100; }
+    header .logo a#linkedin {
+      float: right;
+      display: block;
+      -webkit-transition: all 100ms ease-in-out;
+              transition: all 100ms ease-in-out; }
+      header .logo a#linkedin svg {
+        height: 30px;
+        margin: 0; }
+        header .logo a#linkedin svg path#bg {
+          fill: rgba(245, 122, 49, 0.4); }
+        header .logo a#linkedin svg g#logo rect, header .logo a#linkedin svg g#logo path, header .logo a#linkedin svg g#logo circle {
+          fill: rgba(242, 242, 242, 0.4); }
+      header .logo a#linkedin:hover svg path#bg {
+        fill: rgba(245, 122, 49, 0.8); }
+      header .logo a#linkedin:hover svg g#logo rect, header .logo a#linkedin:hover svg g#logo path, header .logo a#linkedin:hover svg g#logo circle {
+        fill: rgba(242, 242, 242, 0.8); }
     @media (max-width: 64em) {
       header .logo {
         display: none; } }
