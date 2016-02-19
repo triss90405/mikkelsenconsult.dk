@@ -1214,6 +1214,57 @@ a {
 .cf:after {
   clear: both; }
 
+/* - - - - -  Sticky nav section  - - - - - */
+nav#sticky-nav {
+  background: #2B2B2B;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 60px;
+  -webkit-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
+  top: -60px; }
+  nav#sticky-nav .nav-items {
+    float: right; }
+    @media (max-width: 64em) {
+      nav#sticky-nav .nav-items {
+        width: 100vw;
+        margin-top: -10px;
+        background: #2B2B2B;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: all 400ms ease-in-out;
+                transition: all 400ms ease-in-out; } }
+    nav#sticky-nav .nav-items a {
+      margin: 11px 10px;
+      padding: 6px 15px;
+      font-size: 16px;
+      display: inline-block; }
+      @media (max-width: 64em) {
+        nav#sticky-nav .nav-items a {
+          width: 100%;
+          display: block;
+          text-align: center; } }
+    nav#sticky-nav .nav-items.active {
+      max-height: 1000px; }
+  nav#sticky-nav .toggle {
+    display: none;
+    position: relative;
+    text-align: right;
+    margin-top: -3px;
+    cursor: pointer; }
+    nav#sticky-nav .toggle svg {
+      height: 50px; }
+      nav#sticky-nav .toggle svg line {
+        stroke: #f57a31; }
+    @media (max-width: 64em) {
+      nav#sticky-nav .toggle {
+        display: block; } }
+  nav#sticky-nav svg {
+    margin: 9px; }
+    nav#sticky-nav svg path {
+      fill: #f57a31; }
+
 /* - - - - -  Header section  - - - - - */
 header {
   overflow: hidden;
@@ -1253,15 +1304,19 @@ header {
     height: 100%;
     background-attachment: fixed;
     background-image: url("/assets/img/building-bg.png");
+    background-size: cover;
     opacity: 0.06;
     left: 0;
     top: 0; }
   header .logo {
-    margin: 0;
+    margin: 0 5%;
     padding: 0;
     font-size: 30px;
     line-height: 1;
     font-weight: 100; }
+    @media (max-width: 64em) {
+      header .logo {
+        display: none; } }
     header .logo span {
       color: #f57a31; }
   header .cta {
@@ -1281,24 +1336,34 @@ header {
       fill: rgba(245, 122, 49, 0.2); }
     header svg text {
       fill: rgba(245, 122, 49, 0.2); }
+  header h3 {
+    color: #2B2B2B;
+    font-weight: 700;
+    letter-spacing: 2px; }
   header nav {
-    margin: 50px 0 100px 0; }
+    margin: 200px 0 100px 0; }
     @media (max-width: 64em) {
       header nav {
-        margin: 0 0 30px 0; } }
+        margin: 0px 0 20% 0; } }
     header nav a {
       color: #f57a31;
-      font-size: 14px;
+      font-size: 18px;
       font-family: "Open Sans", sans-serif;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 20px;
       padding: 20px;
       -webkit-transition: color 100ms ease-in-out;
               transition: color 100ms ease-in-out; }
       @media (max-width: 64em) {
         header nav a {
           padding: 7px;
-          margin: 0; } }
+          margin: 0;
+          font-size: 14px; } }
+      header nav a.btn.normal {
+        font-size: 18px; }
+        @media (max-width: 64em) {
+          header nav a.btn.normal {
+            font-size: 14px; } }
       header nav a:hover {
         text-decoration: underline; }
 
@@ -1306,10 +1371,7 @@ header {
 section#about .about-title,
 section#about .about-text {
   padding: 75px;
-  min-height: 100vh; }
-section#about .about-title {
-  background: #f57a31;
-  color: #F2F2F2;
+  min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1321,11 +1383,15 @@ section#about .about-title {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: center; }
+section#about .about-title {
+  background: #f57a31;
+  color: #F2F2F2;
   text-align: center; }
   @media (max-width: 64em) {
     section#about .about-title {
-      padding: 15px 0; } }
+      padding: 15px 0;
+      min-height: 15vh; } }
   section#about .about-title h1 {
     font-size: 40px; }
     @media (max-width: 64em) {
@@ -1335,7 +1401,8 @@ section#about .about-text {
   background: #F2F2F2; }
   @media (max-width: 64em) {
     section#about .about-text {
-      padding: 50px 5%; } }
+      padding: 50px 5%;
+      min-height: 85vh; } }
   section#about .about-text p {
     font-weight: 400;
     line-height: 1.7;
@@ -1349,85 +1416,42 @@ section#about .about-text {
     font-size: 16px; }
 
 /* - - - - -  Projektor section  - - - - - */
-section#portfolio .header {
-  overflow: hidden;
-  color: #F2F2F2;
-  background: black;
-  opacity: 0.85;
-  overflow: hidden;
-  position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: center; }
-  @media (max-width: 64em) {
-    section#portfolio .header {
-      padding: 25px 0; } }
-  section#portfolio .header .bg {
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    background-attachment: fixed;
-    background-image: url("/assets/img/building-bg.png");
-    opacity: 0.06;
-    left: 0;
-    top: 0; }
-section#portfolio .prj-item:hover .prj-img img {
-  -webkit-transform: scale(1.5);
-      -ms-transform: scale(1.5);
-          transform: scale(1.5); }
-section#portfolio .prj-item:hover .prj-img .img-overlay {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition: all 200ms ease-in-out;
-          transition: all 200ms ease-in-out; }
-section#portfolio .prj-item .prj-text {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  padding: 0;
-  margin: 0; }
-  section#portfolio .prj-item .prj-text .inner {
+section#projects {
+  background: #F2F2F2; }
+  section#projects .header {
+    overflow: hidden;
+    color: #F2F2F2;
+    background: black;
+    opacity: 0.85;
+    overflow: hidden;
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
     text-align: center; }
     @media (max-width: 64em) {
-      section#portfolio .prj-item .prj-text .inner {
-        padding: 35px 0 10px 0; } }
-    section#portfolio .prj-item .prj-text .inner h2 {
-      line-height: 1.6; }
-    section#portfolio .prj-item .prj-text .inner h3 {
-      line-height: 2; }
-    section#portfolio .prj-item .prj-text .inner .btn.normal {
-      margin: 10px 0 0 0;
-      font-size: 16px; }
-      @media (max-width: 64em) {
-        section#portfolio .prj-item .prj-text .inner .btn.normal {
-          display: none; } }
-section#portfolio .prj-item .prj-img {
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  -webkit-transition: all 2s ease-in-out;
-          transition: all 2s ease-in-out; }
-  @media (max-width: 64em) {
-    section#portfolio .prj-item .prj-img:last-child {
-      margin-bottom: 5%; } }
-  section#portfolio .prj-item .prj-img .img-overlay {
-    background: rgba(43, 43, 43, 0.8);
-    position: absolute;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    color: white;
+      section#projects .header {
+        padding: 25px 0; } }
+    section#projects .header .bg {
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      background-attachment: fixed;
+      background-image: url("/assets/img/building-bg.png");
+      background-size: cover;
+      opacity: 0.06;
+      left: 0;
+      top: 0; }
+  section#projects .prj-item:hover .prj-img img {
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5); }
+  section#projects .prj-item:hover .prj-img .img-overlay {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 200ms ease-in-out;
+            transition: all 200ms ease-in-out; }
+  section#projects .prj-item .prj-text {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1441,55 +1465,126 @@ section#portfolio .prj-item .prj-img {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    font-size: 24px;
-    color: #f57a31;
-    opacity: 0;
-    visibility: hidden;
+    padding: 0;
+    margin: 0; }
+    section#projects .prj-item .prj-text .inner {
+      text-align: center; }
+      @media (max-width: 64em) {
+        section#projects .prj-item .prj-text .inner {
+          padding: 35px 0 10px 0; } }
+      section#projects .prj-item .prj-text .inner h2 {
+        line-height: 1.6; }
+      section#projects .prj-item .prj-text .inner h3 {
+        line-height: 2; }
+      section#projects .prj-item .prj-text .inner .btn.normal {
+        margin: 10px 0 0 0;
+        font-size: 16px; }
+        @media (max-width: 64em) {
+          section#projects .prj-item .prj-text .inner .btn.normal {
+            display: none; } }
+  section#projects .prj-item .prj-img {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
     -webkit-transition: all 2s ease-in-out;
             transition: all 2s ease-in-out; }
-    section#portfolio .prj-item .prj-img .img-overlay:hover {
-      text-decoration: none; }
-    section#portfolio .prj-item .prj-img .img-overlay.shown {
-      opacity: 1;
-      visibility: visible; }
     @media (max-width: 64em) {
-      section#portfolio .prj-item .prj-img .img-overlay {
-        width: 90%;
-        margin: 0 0 0 5%; } }
-  section#portfolio .prj-item .prj-img img {
-    width: 100%;
-    height: auto;
-    margin-bottom: -4px;
-    -webkit-transition: all 3s ease-in-out;
-            transition: all 3s ease-in-out; }
-    @media (max-width: 64em) {
-      section#portfolio .prj-item .prj-img img {
-        width: 90%; } }
+      section#projects .prj-item .prj-img:last-child {
+        margin-bottom: 5%; } }
+    section#projects .prj-item .prj-img .img-overlay {
+      background: rgba(43, 43, 43, 0.8);
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      color: white;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      text-align: center;
+      font-size: 24px;
+      color: #f57a31;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transition: all 2s ease-in-out;
+              transition: all 2s ease-in-out; }
+      section#projects .prj-item .prj-img .img-overlay:hover {
+        text-decoration: none; }
+      section#projects .prj-item .prj-img .img-overlay.shown {
+        opacity: 1;
+        visibility: visible; }
+      @media (max-width: 64em) {
+        section#projects .prj-item .prj-img .img-overlay {
+          width: 90%;
+          margin: 0 0 0 5%; } }
+    section#projects .prj-item .prj-img img {
+      width: 100%;
+      height: auto;
+      margin-bottom: -4px;
+      -webkit-transition: all 3s ease-in-out;
+              transition: all 3s ease-in-out; }
+      @media (max-width: 64em) {
+        section#projects .prj-item .prj-img img {
+          width: 90%; } }
 
 /* - - - - -  Contact section  - - - - - */
-section#contact {
+section#contact .cotntact-title,
+section#contact .contact-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+section#contact .contact-title {
   background: #f57a31;
   padding: 75px 0;
-  text-align: center; }
-  section#contact h1, section#contact p {
+  text-align: center;
+  margin-top: -1px;
+  min-height: 100vh; }
+  section#contact .contact-title h1, section#contact .contact-title p {
     color: #F2F2F2; }
-  section#contact h1 {
+  section#contact .contact-title h1 {
     font-size: 40px; }
-  section#contact p a {
+  section#contact .contact-title p a {
     color: white;
     text-decoration: underline; }
-  section#contact p.subtitle {
+  section#contact .contact-title p.subtitle {
     color: #b74a09;
     font-size: 12px;
     margin: -20px 0 20px 0; }
-  section#contact p.name {
+  section#contact .contact-title p.name {
     font-size: 30px;
     margin: 50px 0 10px 0;
     font-weight: 700; }
-  section#contact svg#logo-contact {
+  section#contact .contact-title svg#logo-contact {
     margin: 40px 0  0; }
-    section#contact svg#logo-contact path {
+    section#contact .contact-title svg#logo-contact path {
       fill: #e85d0b; }
+section#contact .contact-form {
+  padding: 0 75px;
+  background: #F2F2F2; }
+  section#contact .contact-form label {
+    margin: 10px 0; }
+  section#contact .contact-form input[type='text'],
+  section#contact .contact-form input[type='email'],
+  section#contact .contact-form textarea {
+    width: 100%; }
 
 /* - - - - -  Footer section  - - - - - */
 footer {
@@ -1509,6 +1604,7 @@ footer {
     height: 100%;
     background-attachment: fixed;
     background-image: url("/assets/img/building-bg.png");
+    background-size: cover;
     opacity: 0.06;
     left: 0;
     top: 0; }
@@ -1531,8 +1627,14 @@ footer {
   footer .name {
     padding: 0 5%;
     text-align: right; }
+    footer .name span {
+      color: rgba(245, 122, 49, 0.4); }
     @media (max-width: 64em) {
       footer .name {
         text-align: center; } }
     footer .name h1 {
       color: #2B2B2B; }
+    footer .name p {
+      color: #2B2B2B;
+      font-size: 14px;
+      margin-top: -20px; }

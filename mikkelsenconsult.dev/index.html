@@ -12,21 +12,48 @@
 <body>
 
 
-  <div class="loading">
+  <!-- Loading screen section -->
+  <div class="loading"></div>
 
-  </div>
+
+
+  <!-- Sticky navigation section -->
+  <nav id="sticky-nav">
+    <div class="row">
+      <div class="tiny-3 small-3 medium-3 large-3">
+        <svg width="60px" height="50px" viewBox="0 0 180 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+            <g id="logo_text" sketch:type="MSLayerGroup" transform="translate(-2.000000, 0.000000)" fill="#545454">
+              <path d="M156.182692,138 L182,138 L182,0 L3,0 L3,138 L28.8173077,138 L28.8173077,27.6 L156.182692,27.6 L156.182692,138 Z" id="c" sketch:type="MSShapeGroup"></path>
+              <path d="M92.4232462,70.5295324 L121.846492,36 L134.376898,36 L146.907304,36 L147,137.136773 L122.092696,137.136773 L122.026597,65.0185059 L105,85 L92.4232462,85 L79.8464924,85 L61.9881805,64.0424498 L62.0552186,137.184908 L37.1479146,137.184908 L37.0552186,36.0481348 L38.1337125,36.0481348 L38.092696,36 L63,36 L92.4232462,70.5295324 Z M80,85 L105,85 L92.5,99.1044655 L80,85 Z" id="m" sketch:type="MSShapeGroup"></path>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="tiny-9 small-9 medium-9 large-9">
+        <a class="toggle">
+          <svg enable-background="new 0 0 24 24" id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" x1="2" x2="22" y1="12" y2="12"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" x1="2" x2="22" y1="6" y2="6"/><line fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" x1="2" x2="22" y1="18" y2="18"/></svg>
+        </a>
+        <div class="nav-items">
+          <a href="#home" title="hjem">Start</a>
+          <a href="#about" title="omkring">Omkring</a>
+          <a href="#projects" title="projekter">Projekter</a>
+          <a href="#contact" title="kontakt">Kontakt</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
 
   <!-- Header and navigation section -->
   <header id="home">
     <div class="bg"></div>
+    <div class="logo"><span>M</span>IKKELSEN<span>C</span>ONSULT</div>
     <div class="container">
       <div class="row">
         <div class="tiny-12 center-tiny header-content">
-          <div class="row">
-            <div class="tiny-12 small-12 medium-6 large-6 center-tiny center-small start-medium start-large">
-              <h1 class="logo"><span>M</span>IKKELSEN<span>C</span>ONSULT</h1>
-            </div>
-          </div>
           <div class="logo-contaier">
             <svg width="200px" height="159px" viewBox="0 0 180 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
               <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -40,20 +67,18 @@
               </g>
             </svg>
           </div>
-
           <h3>Hej! Mit navn er Rasmus Mikkelsen.<br>Jeg bygger huse! Hvad gør du?</h3>
-
-          <nav>
+          <nav id="main-nav">
             <a href="#home" class="btn normal" title="hjem">Start</a>
             <a href="#about" title="omkring">Omkring</a>
-            <a href="#portfolio" title="portfolio">Portfolio</a>
+            <a href="#projects" title="projekter">Projekter</a>
             <a href="#contact" title="kontakt">Kontakt</a>
           </nav>
-
         </div>
       </div>
     </div>
   </header>
+
 
 
   <!-- About section -->
@@ -65,24 +90,24 @@
           </div>
         </div>
         <div class="tiny-12 small-12 medium-6 large-6 about-text">
-          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Illum magni saepe</a>, deleniti quos temporibus.</h2><br><hr><br>
-          <p><a href="#">Rasmus Mikkelsen</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at imperdiet lorem. Sed vitae sodales nulla. Etiam tincidunt cursus augue vel posuere. Aenean justo arcu, hendrerit non lacinia efficitur, viverra vitae mi. In blandit finibus ex a maximus. Vestibulum nec consectetur justo. Nam tempor iaculis metus auctor posuere. Duis vulputate ipsum non ante mattis, in cursus diam elementum. Nam hendrerit mauris ut mauris viverra ornare.</p><br>
-          <p>Mauris augue lacus, porta nec urna a, malesuada egestas nisi. Nam est nunc, commodo et <a href="#">Rasmus Mikkelsen</a> neque sed, ornare ullamcorper elit. Fusce volutpat libero eu lacus varius iaculis. Donec erat nisi, fermentum eu lacinia quis, blandit non orci. Maecenas pharetra libero eu tempor ornare. Nullam id tortor dictum, euismod lacus sagittis, ullamcorper justo. Pellentesque sodales mi sit amet turpis accumsan, sed consequat est aliquet.</p>
-          <a href="#" class="btn normal">Lad os snakke</a>
+          <div>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Illum magni saepe</a>, deleniti quos temporibus.</h2><br><hr><br>
+            <p><a href="#">Rasmus Mikkelsen</a> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at imperdiet lorem. Sed vitae sodales nulla. Etiam tincidunt cursus augue vel posuere. Aenean justo arcu, hendrerit non lacinia efficitur, viverra vitae mi. In blandit finibus ex a maximus. Vestibulum nec consectetur justo. Nam tempor iaculis metus auctor posuere. Duis vulputate ipsum non ante mattis, in cursus diam elementum. Nam hendrerit mauris ut mauris viverra ornare.</p><br>
+            <p>Mauris augue lacus, porta nec urna a, malesuada egestas nisi. Nam est nunc, commodo et <a href="#">Rasmus Mikkelsen</a> neque sed, ornare ullamcorper elit. Fusce volutpat libero eu lacus varius iaculis. Donec erat nisi, fermentum eu lacinia quis, blandit non orci. Maecenas pharetra libero eu tempor ornare. Nullam id tortor dictum, euismod lacus sagittis, ullamcorper justo. Pellentesque sodales mi sit amet turpis accumsan, sed consequat est aliquet.</p>
+            <a href="#" class="btn normal">Lad os snakke</a>
+        </div>
         </div>
     </div>
   </section>
 
 
-  <!-- portfolio section -->
-  <section id="portfolio">
+
+  <!-- projects section -->
+  <section id="projects">
     <div class="header">
       <div class="bg"></div>
-      <h1>Portfolio</h1>
+      <h1>Projekter</h1>
     </div>
-
-
-
     <div class="row prj-item">
       <div class="tiny-12 small-12 medium-6 large-6 first-tiny first-small first-medium first-large prj-text">
         <div class="inner">
@@ -96,7 +121,6 @@
         <img src="/assets/img/projects/prj-1.png" alt="First project">
       </div>
     </div>
-
     <div class="row prj-item">
       <div class="tiny-12 small-12 medium-6 large-6 prj-img">
         <a href="#" class="img-overlay">Read more...</a>
@@ -110,7 +134,6 @@
         </div>
       </div>
     </div>
-
     <div class="row prj-item">
       <div class="tiny-12 small-12 medium-6 large-6 first-tiny first-small first-medium first-large prj-text">
         <div class="inner">
@@ -124,29 +147,50 @@
         <img src="/assets/img/projects/prj-3.png" class="" alt="First project">
       </div>
     </div>
-
   </section>
+
+
 
 
   <!-- Contact section -->
   <section id="contact">
-    <h1>Kontakt mig</h1>
-    <p class="subtitle">Bare rolig, jeg bider ikke!</p>
-    <svg width="180px" height="159px" viewBox="0 0 180 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="logo_text" sketch:type="MSLayerGroup" transform="translate(-2.000000, 0.000000)" fill="#545454">
-          <path d="M156.182692,138 L182,138 L182,0 L3,0 L3,138 L28.8173077,138 L28.8173077,27.6 L156.182692,27.6 L156.182692,138 Z" id="c" sketch:type="MSShapeGroup"></path>
-          <path d="M92.4232462,70.5295324 L121.846492,36 L134.376898,36 L146.907304,36 L147,137.136773 L122.092696,137.136773 L122.026597,65.0185059 L105,85 L92.4232462,85 L79.8464924,85 L61.9881805,64.0424498 L62.0552186,137.184908 L37.1479146,137.184908 L37.0552186,36.0481348 L38.1337125,36.0481348 L38.092696,36 L63,36 L92.4232462,70.5295324 Z M80,85 L105,85 L92.5,99.1044655 L80,85 Z" id="m" sketch:type="MSShapeGroup"></path>
-          <text id="MIKKELSEN-CONSULT" sketch:type="MSTextLayer" font-family="Open Sans" font-size="17" font-weight="bold" sketch:alignment="middle">
-            <tspan x="1.33691406" y="158">MIKKELSEN CONSULT</tspan>
-          </text>
-        </g>
-      </g>
-    </svg>
-    <p class="name">Rasmus Mikkelsen</p>
-    <p>Tlf: <a href="tel:12345678" title="Ring til mig">12 34 56 78</a></p>
-    <p>Mail: <a href="mailto:someone@example.com?Subject=Hej%20Rasmus" title="Send mig en mail" target="_top">someone@example.com</a></p>
+    <div class="row">
+
+      <div class="tiny-12 small-12 medium-6 large-6 contact-title">
+        <div>
+          <h1>Kontakt mig</h1>
+          <p class="subtitle">Bare rolig, jeg bider ikke!</p>
+          <svg width="180px" height="159px" viewBox="0 0 180 159" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+              <g id="logo_text" sketch:type="MSLayerGroup" transform="translate(-2.000000, 0.000000)" fill="#545454">
+                <path d="M156.182692,138 L182,138 L182,0 L3,0 L3,138 L28.8173077,138 L28.8173077,27.6 L156.182692,27.6 L156.182692,138 Z" id="c" sketch:type="MSShapeGroup"></path>
+                <path d="M92.4232462,70.5295324 L121.846492,36 L134.376898,36 L146.907304,36 L147,137.136773 L122.092696,137.136773 L122.026597,65.0185059 L105,85 L92.4232462,85 L79.8464924,85 L61.9881805,64.0424498 L62.0552186,137.184908 L37.1479146,137.184908 L37.0552186,36.0481348 L38.1337125,36.0481348 L38.092696,36 L63,36 L92.4232462,70.5295324 Z M80,85 L105,85 L92.5,99.1044655 L80,85 Z" id="m" sketch:type="MSShapeGroup"></path>
+                <text id="MIKKELSEN-CONSULT" sketch:type="MSTextLayer" font-family="Open Sans" font-size="17" font-weight="bold" sketch:alignment="middle">
+                  <tspan x="1.33691406" y="158">MIKKELSEN CONSULT</tspan>
+                </text>
+              </g>
+            </g>
+          </svg>
+          <p class="name">Rasmus Mikkelsen</p>
+          <p>Tlf: <a href="tel:12345678" title="Ring til mig">12 34 56 78</a></p>
+          <p>Mail: <a href="mailto:someone@example.com?Subject=Hej%20Rasmus" title="Send mig en mail" target="_top">someone@example.com</a></p>
+        </div>
+      </div>
+
+      <div class="tiny-12 small-12 medium-6 large-6 contact-form">
+        <form action="mail.php" method="post">
+          <label for="name">Dit navn: <input id="name" name="name" type="text"></label>
+          <label for="mail">Din email: <input id="mail" name="mail" type="email"></label>
+          <label for="msg">Besked: <textarea name="msg" id="msg" cols="30" rows="10"></textarea></label>
+          <button type="submit" class="btn normal">Send besked</button>
+        </form>
+      </div>
+
+
+    </div>
   </section>
+
+
 
 
   <!-- Footer section -->
@@ -163,6 +207,7 @@
       </div>
       <div class="tiny-12 small-12 medium-6 large-6 name">
         <h1 class="logo"><span>M</span>IKKELSEN<span>C</span>ONSULT</h1>
+        <p>&copy; Copyright 2016</p>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>

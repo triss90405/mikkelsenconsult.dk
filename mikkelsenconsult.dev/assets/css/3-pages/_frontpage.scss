@@ -8,6 +8,71 @@
     clear: both;
 }
 
+
+
+
+/* - - - - -  Sticky nav section  - - - - - */
+nav#sticky-nav {
+  background: $black;
+  // background: white;
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 60px;
+  transition: all 200ms ease-in-out;
+  top: -60px;
+  .nav-items {
+    float: right;
+    @media (max-width: 64em) {
+      width: 100vw;
+      margin-top: -10px;
+      background: $black;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 400ms ease-in-out;
+    }
+    a {
+      margin: 11px 10px;
+      padding: 6px 15px;
+      font-size: 16px;
+      display: inline-block;
+      @media (max-width: 64em) {
+        width: 100%;
+        display: block;
+        text-align: center;
+      }
+    }
+    &.active {;
+      max-height: 1000px;
+    }
+  }
+  .toggle {
+    display: none;
+    position: relative;
+    text-align: right;
+    margin-top: -3px;
+    cursor: pointer;
+    svg {
+      height: 50px;
+      line {
+        stroke: $main-color;
+      }
+    }
+    @media (max-width: 64em) {
+      display: block;
+    }
+  }
+  svg {
+    margin: 9px;
+    path {
+      fill: $main-color;
+    }
+  }
+}
+
+
+
+
 /* - - - - -  Header section  - - - - - */
 header {
   overflow: hidden;
@@ -38,16 +103,20 @@ header {
     height: 100%;
     background-attachment: fixed;
     background-image: url("/assets/img/building-bg.png");
+    background-size: cover;
     opacity: 0.06;
     left: 0;
     top: 0;
   }
   .logo {
-    margin: 0;
+    margin: 0 5%;
     padding: 0;
     font-size: 30px;
     line-height: 1;
     font-weight: 100;
+    @media (max-width: 64em) {
+      display: none;
+    }
     span {
       color: $main-color;
     }
@@ -73,22 +142,35 @@ header {
       fill: rgba($main-color, 0.2);
     }
   }
+
+  h3 {
+    color: $black;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
   nav {
-    margin: 50px 0 100px 0;
+    margin: 200px 0 100px 0;
     @media (max-width: 64em) {
-      margin: 0 0 30px 0;
+      margin: 0px 0 20% 0;
     }
     a {
       color: $main-color;
-      font-size: 14px;
+      font-size: 18px;
       font-family: $primary-font;
       text-decoration: none;
-      margin: 0 10px;
+      margin: 0 20px;
       padding: 20px;
       transition: color 100ms ease-in-out;
       @media (max-width: 64em) {
         padding: 7px;
         margin: 0;
+        font-size: 14px;
+      }
+      &.btn.normal {
+        font-size: 18px;
+        @media (max-width: 64em) {
+          font-size: 14px;
+        }
       }
       &:hover {
         text-decoration: underline;;
@@ -98,23 +180,25 @@ header {
 }
 
 
+
+
 /* - - - - -  About section  - - - - - */
 section#about {
-
   .about-title,
   .about-text {
     padding: 75px;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .about-title {
     background: $main-color;
     color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     @media (max-width: 64em) {
       padding: 15px 0;
+      min-height: 15vh;
     }
     h1 {
       font-size: 40px;
@@ -127,6 +211,7 @@ section#about {
     background: $white;
     @media (max-width: 64em) {
       padding: 50px 5%;
+      min-height: 85vh;
     }
     p {
       font-weight: 400;
@@ -146,8 +231,11 @@ section#about {
 }
 
 
+
+
 /* - - - - -  Projektor section  - - - - - */
-section#portfolio {
+section#projects {
+  background: $white;
   .header {
     overflow: hidden;
     color: $white;
@@ -168,6 +256,7 @@ section#portfolio {
       height: 100%;
       background-attachment: fixed;
       background-image: url("/assets/img/building-bg.png");
+      background-size: cover;
       opacity: 0.06;
       left: 0;
       top: 0;
@@ -271,38 +360,62 @@ section#portfolio {
 
 /* - - - - -  Contact section  - - - - - */
 section#contact {
-  background: $main-color;
-  padding: 75px 0;
-  text-align: center;
-  h1, p {
-    color: $white;
+  .cotntact-title,
+  .contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  h1 {
-    font-size: 40px;
-  }
-  p {
-    a {
-      color: white;
-      text-decoration: underline;
+  .contact-title {
+    background: $main-color;
+    padding: 75px 0;
+    text-align: center;
+    margin-top: -1px;
+    min-height: 100vh;
+    h1, p {
+      color: $white;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+    p.subtitle {
+      color: darken($main-color, 20%);
+      font-size: 12px;
+      margin: -20px 0 20px 0;
+    }
+    p.name {
+      font-size: 30px;
+      margin: 50px 0 10px 0;
+      font-weight: 700
+    }
+    svg#logo-contact {
+      margin: 40px 0  0;
+      path {
+        fill: darken($main-color, 10%);
+      }
     }
   }
-  p.subtitle {
-    color: darken($main-color, 20%);
-    font-size: 12px;
-    margin: -20px 0 20px 0;
-  }
-  p.name {
-    font-size: 30px;
-    margin: 50px 0 10px 0;
-    font-weight: 700
-  }
-  svg#logo-contact {
-    margin: 40px 0  0;
-    path {
-      fill: darken($main-color, 10%);
+  .contact-form {
+    padding: 0 75px;
+    background: $white;
+    label {
+      margin: 10px 0;
+    }
+    input[type='text'],
+    input[type='email'],
+    textarea {
+      width: 100%;
+
     }
   }
 }
+
 
 
 
@@ -324,6 +437,7 @@ footer {
     height: 100%;
     background-attachment: fixed;
     background-image: url("/assets/img/building-bg.png");
+    background-size: cover;
     opacity: 0.06;
     left: 0;
     top: 0;
@@ -354,11 +468,19 @@ footer {
   .name {
     padding: 0 5%;
     text-align: right;
+    span {
+      color: rgba($main-color, 0.4);
+    }
     @media (max-width: 64em) {
       text-align: center;
     }
     h1 {
       color: $black;
+    }
+    p {
+      color: $black;
+      font-size: 14px;
+      margin-top: -20px;
     }
   }
 }
