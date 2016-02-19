@@ -1,3 +1,12 @@
+/* - - - - - Animations - - - - - */
+@keyframes pulse {
+  0%   { transform: scale(1.0); }
+  50% { transform: scale(1.6); }
+  100% { transform: scale(1.0); }
+}
+
+
+
 /* - - - - - Clear floats - - - - - */
 .cf:before,
 .cf:after {
@@ -220,6 +229,17 @@ header {
       }
       &:hover {
         text-decoration: underline;;
+      }
+    }
+  }
+  .arrow {
+    svg {
+      animation: pulse 1s infinite;
+      margin-top: 0px;
+      width: 30px;
+      height: 30px;
+      polyline {
+        stroke: $main-color;
       }
     }
   }
