@@ -1325,7 +1325,10 @@ header {
       header .cta {
         display: none; } }
   header svg {
-    margin: 100px 0 50px 0; }
+    margin: 10% 0 50px 0; }
+    @media (min-height: 800px) {
+      header svg {
+        margin: 20% 0 50px 0; } }
     @media (max-width: 64em) {
       header svg {
         width: 50%;
@@ -1345,6 +1348,9 @@ header {
     @media (max-width: 64em) {
       header nav {
         margin: 0px 0 20% 0; } }
+    @media (max-height: 800px) {
+      header nav {
+        margin: 50px 0 100px 0; } }
     header nav a {
       color: #f57a31;
       font-size: 18px;
