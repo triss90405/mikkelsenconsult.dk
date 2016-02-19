@@ -195,8 +195,13 @@ header {
     @media (max-width: 64em) {
       display: none;
     }
-    span {
-      color: $main-color;
+    a {
+      color: white;
+      font-weight: 100;
+      text-decoration: none;
+      span {
+        color: $main-color;
+      }
     }
   }
   .cta {

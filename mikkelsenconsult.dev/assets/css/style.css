@@ -1402,8 +1402,12 @@ header {
     @media (max-width: 64em) {
       header .logo {
         display: none; } }
-    header .logo span {
-      color: #f57a31; }
+    header .logo a {
+      color: white;
+      font-weight: 100;
+      text-decoration: none; }
+      header .logo a span {
+        color: #f57a31; }
   header .cta {
     text-align: right; }
     @media (max-width: 64em) {
