@@ -24,7 +24,7 @@ $( document ).ready(function() {
       var nav = $('#sticky-nav'),
           navInner = $('.nav-items'),
           yScrollPos = window.pageYOffset,
-          scrollPosNav = 600;
+          scrollPosNav = 800;
       if(yScrollPos > scrollPosNav) {
         nav.css("top", "0");
       }
