@@ -58,9 +58,26 @@ $( document ).ready(function() {
 
 
 
+  /* - - - - - Loading screen - - - - - */
+  var loadingScreen = function() {
+    var svg = $('.animating-logo svg'),
+        loadingBar = $('.loading-bar-fill');
+    loadingBar.css('width', '100%');
+    svg.css('opacity','1');
+    setTimeout(
+    function() {
+      var loadingScreen = $('#loading-screen');
+      loadingScreen.css('opacity','0');
+      loadingScreen.css('visibility','hidden');
+    }, 3200);
+  };
+
+
+
 
 
   /* - - - - - Call functions - - - - - */
+  loadingScreen();
   smoothScroll();
   scrolledMenu();
   mobileNav();
