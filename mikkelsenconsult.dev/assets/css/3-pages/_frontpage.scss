@@ -77,26 +77,54 @@ nav#sticky-nav {
       float: right;
       @media (max-width: 64em) {
         width: 100vw;
+        position: absolute;
+        left: 0;
         margin-top: -10px;
         background: $black;
         max-height: 0;
         overflow: hidden;
         transition: all 400ms ease-in-out;
       }
-      a {
+      .item {
         margin: 11px 10px;
-        padding: 6px 15px;
-        font-size: 16px;
         display: inline-block;
-        &:last-child {
-          margin-right: 0;
-        }
+        border: 2px solid transparent;
+        transition: border 400ms ease-in-out;
         @media (max-width: 64em) {
-          width: 100%;
           display: block;
-          text-align: center;
+          width: 100vw;
+          margin: 0;
+          &:last-child {
+            margin-bottom: 30px;
+          }
+        }
+        &.active {
+          border: 2px solid $main-color;
+          @media (max-width: 64em) {
+            border-color: transparent;
+          }
+          a:hover {
+            text-decoration: none;
+            @media (max-width: 64em) {
+              text-decoration: underline;
+            }
+          }
+        }
+        a {
+          padding: 6px 15px;
+          font-size: 16px;
+          display: inline-block;
+          &:last-child {
+            margin-right: 0;
+          }
+          @media (max-width: 64em) {
+            width: 100%;
+            display: block;
+            text-align: center;
+          }
         }
       }
+
       &.active {;
         max-height: 1000px;
       }
@@ -370,7 +398,6 @@ section#projects {
       top: 0;
     }
   }
-
   .prj-item {
     &:hover {
       .prj-img {
@@ -474,13 +501,15 @@ section#contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 75px;
+    padding: 75px 75px;
+    @media(max-width: 64em) {
+      padding: 75px 10px;
+    }
     text-align: center;
     min-height: 100vh;
   }
   .contact-title {
     background: $main-color;
-
     h1, p {
       color: $white;
     }
@@ -511,7 +540,6 @@ section#contact {
       }
     }
   }
-
   .contact-form {
     background: $white;
     .form-grp {

@@ -1302,24 +1302,48 @@ nav#sticky-nav {
       @media (max-width: 64em) {
         nav#sticky-nav .wrapper .nav-items {
           width: 100vw;
+          position: absolute;
+          left: 0;
           margin-top: -10px;
           background: #2B2B2B;
           max-height: 0;
           overflow: hidden;
           -webkit-transition: all 400ms ease-in-out;
                   transition: all 400ms ease-in-out; } }
-      nav#sticky-nav .wrapper .nav-items a {
+      nav#sticky-nav .wrapper .nav-items .item {
         margin: 11px 10px;
-        padding: 6px 15px;
-        font-size: 16px;
-        display: inline-block; }
-        nav#sticky-nav .wrapper .nav-items a:last-child {
-          margin-right: 0; }
+        display: inline-block;
+        border: 2px solid transparent;
+        -webkit-transition: border 400ms ease-in-out;
+                transition: border 400ms ease-in-out; }
         @media (max-width: 64em) {
-          nav#sticky-nav .wrapper .nav-items a {
-            width: 100%;
+          nav#sticky-nav .wrapper .nav-items .item {
             display: block;
-            text-align: center; } }
+            width: 100vw;
+            margin: 0; }
+            nav#sticky-nav .wrapper .nav-items .item:last-child {
+              margin-bottom: 30px; } }
+        nav#sticky-nav .wrapper .nav-items .item.active {
+          border: 2px solid #f57a31; }
+          @media (max-width: 64em) {
+            nav#sticky-nav .wrapper .nav-items .item.active {
+              border-color: transparent; } }
+          nav#sticky-nav .wrapper .nav-items .item.active a:hover {
+            text-decoration: none; }
+            @media (max-width: 64em) {
+              nav#sticky-nav .wrapper .nav-items .item.active a:hover {
+                text-decoration: underline; } }
+        nav#sticky-nav .wrapper .nav-items .item a {
+          padding: 6px 15px;
+          font-size: 16px;
+          display: inline-block; }
+          nav#sticky-nav .wrapper .nav-items .item a:last-child {
+            margin-right: 0; }
+          @media (max-width: 64em) {
+            nav#sticky-nav .wrapper .nav-items .item a {
+              width: 100%;
+              display: block;
+              text-align: center; } }
       nav#sticky-nav .wrapper .nav-items.active {
         max-height: 1000px; }
     nav#sticky-nav .wrapper .toggle {
@@ -1662,9 +1686,13 @@ section#contact .contact-form {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 75px;
+  padding: 75px 75px;
   text-align: center;
   min-height: 100vh; }
+  @media (max-width: 64em) {
+    section#contact .contact-title,
+    section#contact .contact-form {
+      padding: 75px 10px; } }
 section#contact .contact-title {
   background: #f57a31; }
   section#contact .contact-title h1, section#contact .contact-title p {
