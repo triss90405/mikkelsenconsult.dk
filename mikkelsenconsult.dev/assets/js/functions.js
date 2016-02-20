@@ -51,8 +51,14 @@ $( document ).ready(function() {
   var formLabel = function() {
     $('.form-grp input').blur(function() {
       if( $(this).val().length > 0 ) {
-          $(this).next('label').css('top', '-10px');
+        $(this).next('label').css('top', '-10px');
       }
+      // if( $(this).is(':focus')) {
+      //   $(this).next('label').css('top', '-10px');
+      // }
+      // if( $(this).val().length <= 0 ) {
+      //   $(this).next('label').css('top', '32px');
+      // }
     });
   };
 
