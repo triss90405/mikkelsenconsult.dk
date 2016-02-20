@@ -69,51 +69,59 @@ nav#sticky-nav {
   height: 60px;
   transition: all 200ms ease-in-out;
   top: -60px;
-  .nav-items {
-    float: right;
-    @media (max-width: 64em) {
-      width: 100vw;
-      margin-top: -10px;
-      background: $black;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 400ms ease-in-out;
-    }
-    a {
-      margin: 11px 10px;
-      padding: 6px 15px;
-      font-size: 16px;
-      display: inline-block;
+  .wrapper {
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+    .nav-items {
+      float: right;
       @media (max-width: 64em) {
-        width: 100%;
+        width: 100vw;
+        margin-top: -10px;
+        background: $black;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 400ms ease-in-out;
+      }
+      a {
+        margin: 11px 10px;
+        padding: 6px 15px;
+        font-size: 16px;
+        display: inline-block;
+        &:last-child {
+          margin-right: 0;
+        }
+        @media (max-width: 64em) {
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+      }
+      &.active {;
+        max-height: 1000px;
+      }
+    }
+    .toggle {
+      display: none;
+      position: relative;
+      text-align: right;
+      margin-top: -3px;
+      cursor: pointer;
+      svg {
+        height: 50px;
+        line {
+          stroke: $main-color;
+        }
+      }
+      @media (max-width: 64em) {
         display: block;
-        text-align: center;
       }
     }
-    &.active {;
-      max-height: 1000px;
-    }
-  }
-  .toggle {
-    display: none;
-    position: relative;
-    text-align: right;
-    margin-top: -3px;
-    cursor: pointer;
     svg {
-      height: 50px;
-      line {
-        stroke: $main-color;
+      margin: 9px;
+      path {
+        fill: $main-color;
       }
-    }
-    @media (max-width: 64em) {
-      display: block;
-    }
-  }
-  svg {
-    margin: 9px;
-    path {
-      fill: $main-color;
     }
   }
 }
