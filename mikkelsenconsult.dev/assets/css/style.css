@@ -1417,18 +1417,10 @@ header {
       float: right;
       display: block;
       -webkit-transition: all 100ms ease-in-out;
-              transition: all 100ms ease-in-out; }
-      header .logo a#linkedin svg {
-        height: 30px;
-        margin: 0; }
-        header .logo a#linkedin svg path#bg {
-          fill: rgba(245, 122, 49, 0.4); }
-        header .logo a#linkedin svg g#logo rect, header .logo a#linkedin svg g#logo path, header .logo a#linkedin svg g#logo circle {
-          fill: rgba(242, 242, 242, 0.4); }
-      header .logo a#linkedin:hover svg path#bg {
-        fill: rgba(245, 122, 49, 0.8); }
-      header .logo a#linkedin:hover svg g#logo rect, header .logo a#linkedin:hover svg g#logo path, header .logo a#linkedin:hover svg g#logo circle {
-        fill: rgba(242, 242, 242, 0.8); }
+              transition: all 100ms ease-in-out;
+      color: rgba(245, 122, 49, 0.4); }
+      header .logo a#linkedin:hover {
+        color: #f57a31; }
     @media (max-width: 64em) {
       header .logo {
         display: none; } }
@@ -1527,13 +1519,21 @@ section#about .about-title {
       min-height: 15vh; } }
   section#about .about-title h1 {
     font-size: 40px;
-    margin: -80px 0 30px 0; }
+    margin: -70px 0 30px 0; }
     @media (max-width: 64em) {
       section#about .about-title h1 {
         font-size: 30px; } }
 section#about .avatar {
   border: 4px solid #F2F2F2;
   border-radius: 50%; }
+section#about a i {
+  font-size: 40px;
+  margin: 20px 10px;
+  color: white;
+  -webkit-transition: color 100ms ease-in-out;
+          transition: color 100ms ease-in-out; }
+  section#about a i:hover {
+    color: #e85d0b; }
 section#about .about-text {
   background: #F2F2F2; }
   @media (max-width: 64em) {
@@ -1795,12 +1795,25 @@ footer {
     footer .nav nav a {
       color: #2B2B2B;
       padding: 0 10px;
-      line-height: 90px; }
+      line-height: 90px;
+      -webkit-transition: color 100ms ease-in-out;
+              transition: color 100ms ease-in-out; }
       footer .nav nav a:first-child {
         padding-left: 0; }
       footer .nav nav a:hover {
         color: #f57a31;
         text-decoration: none; }
+  footer .social {
+    text-align: center;
+    margin-top: 30px; }
+    footer .social a i {
+      font-size: 30px;
+      margin: 0 5px;
+      color: #2B2B2B;
+      -webkit-transition: color 100ms ease-in-out;
+              transition: color 100ms ease-in-out; }
+      footer .social a i:hover {
+        color: #f57a31; }
   footer .name {
     padding: 0 5%;
     text-align: right; }

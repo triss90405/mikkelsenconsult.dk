@@ -202,30 +202,9 @@ header {
       float: right;
       display: block;
       transition: all 100ms ease-in-out;
-      svg {
-        height: 30px;
-        margin: 0;
-
-        path#bg {
-          fill: rgba($main-color, 0.4);
-        }
-        g#logo {
-          rect, path, circle {
-            fill: rgba($white, 0.4);
-          }
-        }
-      }
+      color: rgba($main-color, 0.4);
       &:hover {
-        svg {
-          path#bg {
-            fill: rgba($main-color, 0.8);
-          }
-          g#logo {
-            rect, path, circle {
-              fill: rgba($white, 0.8);
-            }
-          }
-        }
+        color: $main-color;
       }
     }
     @media (max-width: 64em) {
@@ -338,7 +317,7 @@ section#about {
     }
     h1 {
       font-size: 40px;
-      margin: -80px 0 30px 0;
+      margin: -70px 0 30px 0;
       @media (max-width: 64em) {
         font-size: 30px;
       }
@@ -347,6 +326,15 @@ section#about {
   .avatar {
     border: 4px solid $white;
     border-radius: 50%;
+  }
+  a i {
+    font-size: 40px;
+    margin: 20px 10px;
+    color: white;
+    transition: color 100ms ease-in-out;
+    &:hover {
+      color: darken($main-color, 10%);
+    }
   }
   .about-text {
     background: $white;
@@ -635,6 +623,7 @@ footer {
         color: $black;
         padding: 0 10px;
         line-height: 90px;
+        transition: color 100ms ease-in-out;
         &:first-child {
           padding-left: 0;
         }
@@ -642,6 +631,20 @@ footer {
           color: $main-color;
           text-decoration: none;
         }
+      }
+    }
+  }
+  .social {
+    text-align: center;
+    margin-top: 30px;
+    // background: red;
+    a i {
+      font-size: 30px;
+      margin: 0 5px;
+      color: $black;
+      transition: color 100ms ease-in-out;
+      &:hover {
+        color: $main-color;
       }
     }
   }
