@@ -1714,10 +1714,12 @@ section#contact .contact-title {
   section#contact .contact-title p.name {
     font-size: 30px;
     margin: 50px 0 10px 0;
-    font-weight: 700; }
+    font-weight: 100; }
   section#contact .contact-title svg#logo-contact {
     margin: 40px 0  0; }
     section#contact .contact-title svg#logo-contact path {
+      fill: #e85d0b; }
+    section#contact .contact-title svg#logo-contact text {
       fill: #e85d0b; }
 section#contact .contact-form {
   background: #F2F2F2; }
