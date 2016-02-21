@@ -199,7 +199,6 @@
   <!-- Contact section -->
   <section id="contact">
     <div class="row">
-
       <div class="tiny-12 small-12 medium-6 large-6 contact-title">
         <div>
           <h1>Kontakt mig</h1>
@@ -220,36 +219,26 @@
           <p>Mail: <a href="mailto:someone@example.com?Subject=Hej%20Rasmus" title="Send mig en mail" target="_top">someone@example.com</a></p>
         </div>
       </div>
-
       <div class="tiny-12 small-12 medium-6 large-6 contact-form">
-
         <div>
-
-          <form action="mail.php" method="post">
-
+          <div id="form-messages"></div>
+          <form id="ajax-contact" method="post" action="mailer.php">
             <div class="form-grp">
               <input id="name" name="name" required type="text">
               <label for="name">Dit navn</label>
             </div>
-
             <div class="form-grp">
-              <input id="mail" name="mail" required type="email">
-              <label for="mail">Din email</label>
+              <input id="email" name="email" required type="email">
+              <label for="email">Din email</label>
             </div>
-
             <div class="form-grp">
-              <textarea name="msg" id="msg" required cols="30" rows="10"></textarea>
-              <label for="msg">Besked</label>
+              <textarea name="message" id="message" required cols="30" rows="10"></textarea>
+              <label for="message">Besked</label>
             </div>
-
-            <button type="submit" class="btn normal">Send besked</button>
-
+            <input type="submit" class="btn normal" value="Send besked"></input>
           </form>
-
         </div>
       </div>
-
-
     </div>
   </section>
 
