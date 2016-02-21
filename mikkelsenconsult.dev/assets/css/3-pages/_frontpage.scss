@@ -542,6 +542,24 @@ section#contact {
   }
   .contact-form {
     background: $white;
+    #form-messages {
+      &.success {
+        background: lighten($success, 20%);
+        border: 2px solid lighten($success, 10%);
+        color: white;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 20px 0;
+      }
+      &.error {
+        background: lighten($error, 20%);
+        border: 2px solid lighten($error, 10%);
+        color: white;
+        border-radius: 5px;
+        padding: 10px 15px;
+        margin: 20px 0;
+      }
+    }
     .form-grp {
       width: 100%;
       position: relative;

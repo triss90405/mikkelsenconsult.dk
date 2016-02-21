@@ -78,7 +78,7 @@ $( document ).ready(function() {
 
   /* - - - - - Form label  - - - - - */
   var formLabel = function() {
-    $('.form-grp input').blur(function() {
+    $('.form-grp .input').blur(function() {
       if( $(this).val().length > 0 ) {
         $(this).next('label').css('top', '-10px');
       }

@@ -11,34 +11,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     // Set a 400 (bad request) response code and exit.
     http_response_code(400);
-    echo "Oops! There was a problem with your submission. Please complete the form and try again.";
     echo "Oops! lader til at være et problem, udfyld venligs formularen og prøv igen.";
     exit;
   }
 
-  // Set the recipient email address.
-  // FIXME: Update this to your desired email address.
   $recipient = "oliver.tristan@gmail.com";
 
-  // Set the email subject.
   $subject = "Besked fra $name";
 
-  // Build the email content.
   $email_content = "<strong>Navn:</strong> $name" . "<br>";
   $email_content .= "<strong>Email:</strong> $email" . "<br><br>";
   $email_content .= "<strong>Message:</strong><br>$message" . "<br>";
 
-  // Build the email headers.
   $email_headers = "From: $name <$email>";
   $email_headers .= "Reply-To: ". $email . "\r\n";
   $email_headers .= "MIME-Version: 1.0\r\n";
   $email_headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-  // Send the email.
   if (mail($recipient, $subject, $email_content, $email_headers)) {
     // Set a 200 (okay) response code.
     http_response_code(200);
-    echo "Tak for din henvendelse, jeg vender tilbage hurtigst muligt";
+    echo "Tak for din henvendelse, vi vender tilbage hurtigst muligt";
   } else {
     // Set a 500 (internal server error) response code.
     http_response_code(500);

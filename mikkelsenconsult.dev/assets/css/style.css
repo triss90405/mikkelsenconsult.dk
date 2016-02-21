@@ -1717,6 +1717,20 @@ section#contact .contact-title {
       fill: #e85d0b; }
 section#contact .contact-form {
   background: #F2F2F2; }
+  section#contact .contact-form #form-messages.success {
+    background: #7ee2a8;
+    border: 2px solid #54d98c;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 20px 0; }
+  section#contact .contact-form #form-messages.error {
+    background: #f29f97;
+    border: 2px solid #ed7669;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 20px 0; }
   section#contact .contact-form .form-grp {
     width: 100%;
     position: relative; }
