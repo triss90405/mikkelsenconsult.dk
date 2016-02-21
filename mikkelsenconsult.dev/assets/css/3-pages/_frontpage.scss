@@ -617,9 +617,12 @@ footer {
     margin-top: 20px;
   }
   .nav {
-    padding: 0 5%;
+    padding-left: 5%;
+    @media (max-width: 64em) {
+      padding-left: 0;
+    }
     nav {
-      text-align: center;
+      text-align: left;
       color: $black;
       @media (max-width: 64em) {
         text-align: center;
@@ -654,12 +657,13 @@ footer {
     }
   }
   .name {
-    padding: 0 5%;
+    padding-right: 5%;
     text-align: right;
     span {
       color: rgba($main-color, 0.4);
     }
     @media (max-width: 64em) {
+      padding: 0;
       text-align: center;
     }
     h1 {

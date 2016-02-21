@@ -1790,9 +1790,12 @@ footer {
   footer svg {
     margin-top: 20px; }
   footer .nav {
-    padding: 0 5%; }
+    padding-left: 5%; }
+    @media (max-width: 64em) {
+      footer .nav {
+        padding-left: 0; } }
     footer .nav nav {
-      text-align: center;
+      text-align: left;
       color: #2B2B2B; }
       @media (max-width: 64em) {
         footer .nav nav {
@@ -1821,12 +1824,13 @@ footer {
       footer .social a i:hover {
         color: #f57a31; }
   footer .name {
-    padding: 0 5%;
+    padding-right: 5%;
     text-align: right; }
     footer .name span {
       color: rgba(245, 122, 49, 0.4); }
     @media (max-width: 64em) {
       footer .name {
+        padding: 0;
         text-align: center; } }
     footer .name h1 {
       color: #2B2B2B; }
