@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     exit;
   }
 
-  $recipient = "oliver.tristan@gmail.com";
+  $recipient = "rasmus@mikkelsenconsult.dk";
 
   $subject = "Besked fra $name";
 

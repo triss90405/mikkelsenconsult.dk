@@ -1791,20 +1791,24 @@ footer {
     margin-top: 20px; }
   footer .nav {
     padding: 0 5%; }
-    @media (max-width: 64em) {
-      footer .nav nav {
-        text-align: center; } }
-    footer .nav nav a {
-      color: #2B2B2B;
-      padding: 0 10px;
-      line-height: 90px;
-      -webkit-transition: color 100ms ease-in-out;
-              transition: color 100ms ease-in-out; }
-      footer .nav nav a:first-child {
-        padding-left: 0; }
-      footer .nav nav a:hover {
-        color: #f57a31;
-        text-decoration: none; }
+    footer .nav nav {
+      text-align: center;
+      color: #2B2B2B; }
+      @media (max-width: 64em) {
+        footer .nav nav {
+          text-align: center; } }
+      footer .nav nav a {
+        color: #2B2B2B;
+        padding: 0 0px;
+        line-height: 90px;
+        font-size: 13px;
+        -webkit-transition: color 100ms ease-in-out;
+                transition: color 100ms ease-in-out; }
+        footer .nav nav a:first-child {
+          padding-left: 0; }
+        footer .nav nav a:hover {
+          color: #f57a31;
+          text-decoration: none; }
   footer .social {
     text-align: center;
     margin-top: 30px; }
